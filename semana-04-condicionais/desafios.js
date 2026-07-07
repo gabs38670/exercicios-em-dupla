@@ -27,6 +27,11 @@
        }
    RESULTADO ESPERADO: 🚌 675P na plataforma! */
 // ✍️ SOLUÇÃO DA DUPLA:
+let chegou= true;
+if(chegou === true) {
+   console.log("675P na plataforma!")
+}
+
 
 
 /* ═══ EXERCÍCIO 2 — 🎂 Entra ou não entra? ═══
@@ -36,7 +41,13 @@
    DICA: o else é o caminho de "todo o resto".
    RESULTADO ESPERADO: Hoje não, campeão */
 // ✍️ SOLUÇÃO DA DUPLA:
+let idade = 17;
 
+if(idade >= 18){
+   console.log("Pode entrar")
+} else {
+   console.log("Hoje não, campeão")
+}
 
 /* ═══ EXERCÍCIO 3 — 🎓 Aprovado, recuperação ou reprovado? ═══
    CONTEXTO: a nota da UC saiu!
@@ -50,6 +61,15 @@
    DICA: a ORDEM dos testes importa — comece pelo maior.
    RESULTADO ESPERADO: Recuperação 📚 */
 // ✍️ SOLUÇÃO DA DUPLA:
+let nota = 5;
+
+if(nota >= 7){
+   console.log("Aprovado! 🎉")
+} else if(nota >= 5) {
+   console.log("Recuperação 📚")
+} else {
+   console.log("Reprovado 😞")
+}
 
 
 /* ═══ EXERCÍCIO 4 — 🍨 Quem paga o açaí? ═══
@@ -60,6 +80,12 @@
    DICA: par é quando  numero % 2 === 0
    RESULTADO ESPERADO: ÍMPAR — perdeu, paga o açaí 🍨 */
 // ✍️ SOLUÇÃO DA DUPLA:
+let numero = 7;
+if(numero % 2 === 0){
+   console.log("Você venceu!")
+}else {
+   console.log("perdeu, paga o açaí 🍨")
+}
 
 
 /* ═══ EXERCÍCIO 5 — 📅 Promoção do dia (switch) ═══
@@ -75,6 +101,14 @@
    DICA: não esqueça o break — sem ele o switch "vaza" pro próximo.
    RESULTADO ESPERADO: caldo de cana em dobro */
 // ✍️ SOLUÇÃO DA DUPLA:
+let dia = "quarta";
+switch (dia) {
+   case "quarta" : console.log("caldo de cana em dobro");
+   break;
+   case "sexta" : console.log("combo R$ 15");
+   break;
+   default : console.log("Sem promoção hoje 😢")
+}
 
 
 /* ═══ EXERCÍCIO 6 — 🎫 Meia ou inteira? (ternário) ═══
@@ -84,6 +118,10 @@
    EXEMPLO (molde):  let msg = temSol ? "praia" : "filme em casa";
    RESULTADO ESPERADO: Meia: R$ 15 */
 // ✍️ SOLUÇÃO DA DUPLA:
+let estudante = true;
+let resultado = estudante === true ? "Meia: R$ 15" : "Inteira: R$ 30";
+console.log(resultado)
+
 
 
 /* ═══ EXERCÍCIO 7 — 🪪 Balada: RG *E* 18+ ═══
@@ -94,6 +132,14 @@
    ('idade' já existe no exercício 2 — por isso o nome novo!)
    RESULTADO ESPERADO: Barrado no baile */
 // ✍️ SOLUÇÃO DA DUPLA:
+let idadeBalada = 19;
+let temRG = false;
+
+if(idadeBalada >= 19 && temRG === true){
+   console.log("Entrou! 🎉")
+} else {
+   console.log("Barrado no baile")
+}
 
 
 /* ═══ EXERCÍCIO 8 — 💸 Desconto: estudante OU aniversariante ═══
@@ -103,6 +149,13 @@
    mostre "Tem desconto!" ou "Preço cheio" usando ||.
    RESULTADO ESPERADO: Tem desconto! */
 // ✍️ SOLUÇÃO DA DUPLA:
+let ehEstudante = false;
+let ehAniversario = true;
+if( ehEstudante === true || ehAniversario === true){
+   console.log("Tem desconto!")
+}else {
+   console.log("Preço cheio")
+}
 
 
 /* ═══ EXERCÍCIO 9 — 🛡️ Campo vazio não passa ═══
@@ -112,6 +165,12 @@
    DICA: vazio é  nomeDigitado === ""
    RESULTADO ESPERADO: ⚠️ Preencha o nome! */
 // ✍️ SOLUÇÃO DA DUPLA:
+let nomeDigitado = "";
+if(nomeDigitado === ""){
+   console.log("⚠️ Preencha o nome!")
+} else {
+   console.log("Cadastro ok")
+}
 
 
 /* ═══ EXERCÍCIO 10 — 🛡️ Número que não é número ═══
@@ -121,7 +180,10 @@
    DICA: isNaN(x) devolve true quando x é NaN.
    RESULTADO ESPERADO: ⚠️ Valor inválido */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let valor = Number("abc");
+if (valor != isNaN){
+   console.log("⚠️ Valor inválido")
+}
 
 /* ═══ EXERCÍCIO 11 — 🏧 O caixa eletrônico desconfiado ═══
    CONTEXTO: sacar dinheiro tem DUAS regras: ter saldo E o valor
@@ -137,6 +199,15 @@
    DICA: if / else if / else — e teste também com saque = 30 e 200.
    RESULTADO ESPERADO (com 35): Só notas de 10! */
 // ✍️ SOLUÇÃO DA DUPLA:
+let saldoConta = 100;
+let saque = 35;
+if(saque > saldoConta){
+   console.log("Saldo insuficiente")
+}else if (saque % 10 !== 0){
+   console.log("Só notas de 10!")
+} else {
+   console.log("💵 Pode sacar")
+}
 
 
 /* ═══ EXERCÍCIO 12 — 🔧 REFATORE este código feio ═══
@@ -156,7 +227,16 @@
    DICA: quem começa pelo maior nunca precisa do "e menor que".
    RESULTADO ESPERADO: Prata */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let pontos = 85;
+if (pontos >= 90){
+ console.log("Ouro");
+}else if (pontos >= 70) {
+   console.log("Prata");
+}else if (pontos >= 50) {
+   console.log("Bronze")
+} else {
+   console.log("Sem medalha");
+}
 
 /* ═══ EXERCÍCIO 13 — 🍕 Guard clause: pare cedo ═══
    CONTEXTO: dividir a pizza da vitória entre 0 pessoas quebra a
@@ -168,9 +248,13 @@
       1º a guard clause é a PRIMEIRA linha dentro da função
       2º if (pessoas <= 0) → return com a mensagem de aviso
       3º quem retorna, SAI da função — a divisão nem chega a rodar
-   DICA: if + return no COMEÇO da função — o resto nem roda. */
-function dividirPizza(valor, pessoas) {
+      DICA: if + return no COMEÇO da função — o resto nem roda. */
+
+      function dividirPizza(valor, pessoas) {
   // ✍️ SOLUÇÃO DA DUPLA (a guard clause vem AQUI):
+  if ( pessoas <= 0){
+   return "⚠️ Precisa de pelo menos 1 pessoa!";
+  }
 
   return "Cada um paga R$ " + (valor / pessoas);
 }
@@ -187,6 +271,13 @@ console.log(dividirPizza(60, 4)); // Cada um paga R$ 15
          total = total * 0.9;
    RESULTADO ESPERADO: Corrida: R$ 26.1 */
 // ✍️ SOLUÇÃO DA DUPLA:
+let total = (12 *2) + 5;
+
+if (total >= 10){
+   total = total * 0.9;
+   console.log(total)
+}
+
 
 
 /* ═══ EXERCÍCIO 15 — 🏆 DESAFIO DA DUPLA: posso pedir pizza? ═══
@@ -205,13 +296,20 @@ console.log(dividirPizza(60, 4)); // Cada um paga R$ 15
    BÔNUS para a dupla: testem as 4 combinações de a/b e anotem.
    RESULTADO ESPERADO: 🍕 PEDE A PIZZA! */
 // ✍️ SOLUÇÃO DA DUPLA:
-
-
+let grana = 60;
+let fimDeSemana = false;
+let brasilJoga = true;
+if (grana >= 50 && (fimDeSemana === true || brasilJoga === true)) {
+   console.log("🍕 PEDE A PIZZA!")
+  
+} else {
+ console.log("Miojo hoje 🍜")
+}
 
 /* ============================================================
    ✅ CHECKLIST FINAL DA DUPLA
-   [ ] Todas as saídas batem com o resultado esperado?
-   [ ] Os DOIS sabem explicar cada if via código?
-   [ ] Commit nos DOIS GitHubs:
+   [ X ] Todas as saídas batem com o resultado esperado?
+   [ X ] Os DOIS sabem explicar cada if via código?
+   [ X ] Commit nos DOIS GitHubs:
         git commit -m "Semana 04 resolvida — dupla X & Y"
    ============================================================ */

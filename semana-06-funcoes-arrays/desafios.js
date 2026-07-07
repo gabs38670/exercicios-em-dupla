@@ -95,13 +95,15 @@ console.log(dobroSeta(21))
    RESULTADO ESPERADO:
    Bem-vindo(a), visitante! / Bem-vindo(a), Rebeca! */
 // ✍️ SOLUÇÃO DA DUPLA:
-function login(nome) {
-   if(nome === nome){
+function saudar(nome = "visitante") {
+   if(nome != "visitante"){
       console.log(`Bem-vindo(a), ${nome} `)
-   } 
+   } else {
+      console.log("Bem-vindo(a), visitante!")
+   }
 }
-console.log("Bem-vindo(a), visitante!")
-login("Rebeca")
+saudar()
+saudar("rebeca")
 
 /* ═══ EXERCÍCIO 7 — 🔭 Escopo: onde a variável vive ═══
    CONTEXTO: clássico de entrevista técnica!
@@ -202,6 +204,16 @@ console.log(listaFeira.includes("pastel") + " / " + listaFeira.includes("picanha
    DICA: acumulador dentro, return no fim, console.log fora.
    RESULTADO ESPERADO: 60 / 35.8 */
 // ✍️ SOLUÇÃO DA DUPLA:
+function somarLista(numeros){
+   let total = 0;
+   for(let i = 0; i < numeros.length; i++){
+       total += numeros[i]
+   }
+   return total
+}
+console.log(somarLista([10, 20, 30]))
+console.log(somarLista([8.8, 15, 12]))
+ 
 
 
 /* ═══ EXERCÍCIO 13 — 🎓 Contando aprovados ═══
@@ -216,7 +228,16 @@ let notasTurma = [8, 4, 7, 9, 5, 10];
    DICA: contador + for + if — tudo DENTRO da função.
    RESULTADO ESPERADO: 4 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function contarAprovados(notas){
+   let contar = 0;
+   for (let i = 0; i < notas.length; i++){
+   if(notas[i] >= 7){
+      contar++
+      }  
+   }
+   return  contar
+}
+console.log(contarAprovados(notasTurma))
 
 /* ═══ EXERCÍCIO 14 — 📣 Função + for...of ═══
    CONTEXTO: o professor faz a chamada da TI116.
@@ -225,7 +246,14 @@ let notasTurma = [8, 4, 7, 9, 5, 10];
    Chame com ["Duda", "Rebeca", "Vitor"].
    RESULTADO ESPERADO: 3 linhas de presença */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function fazerChamada(lista) {
+   for (nomes of lista) {
+      nomes.length
+      console.log(`✅ ${nomes} presente!`)
+   }
+}
+let chamada = ["Duda", "Rebeca", "Vitor"]
+fazerChamada(chamada)
 
 /* ═══ EXERCÍCIO 15 — 🏆 DESAFIO DA DUPLA: o caixa completo ═══
    CONTEXTO: fim do expediente na lanchonete. As vendas: */
@@ -245,7 +273,18 @@ let vendasDia = [35, 80, 12, 95, 47];
    função reutilizável. Teste também com outro array!
    RESULTADO ESPERADO: Caixa: R$ 269 | Maior venda: R$ 95 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function fecharCaixa(vendas) {
+   let tudo = 0
+   let maior = 0
+   for (let i = 0; i < vendas.length; i++) {
+      tudo += vendas[i]
+      if (vendas[i] > maior) {
+         maior = vendas[i]
+      }
+   }
+   return `Caixa: R$ ${tudo} | Maior venda: R$ ${maior}`
+}
+console.log(fecharCaixa(vendasDia))
 
 
 /* ============================================================

@@ -28,7 +28,12 @@
    DICA: criou e não apareceu nada? Faltou CHAMAR.
    RESULTADO ESPERADO: a frase 3 vezes */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function vinheta() {
+   console.log("📻 Você ouve a Rádio Largo 13!")
+}
+vinheta();
+vinheta();
+vinheta();
 
 /* ═══ EXERCÍCIO 2 — 🎤 Chamando a galera pelo nome ═══
    CONTEXTO: o MC do rolê chama cada um pelo nome.
@@ -37,7 +42,11 @@
    DICA: o parâmetro é a ENTRADA — cada chamada, um valor.
    RESULTADO ESPERADO: 🎤 Sobe aí, Duda! / 🎤 Sobe aí, João! */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+ function chamar(nome) {
+   console.log(`🎤 Sobe aí, ${nome}!`)
+ }
+ chamar("Pedro");
+ chamar("Ana");
 
 /* ═══ EXERCÍCIO 3 — 💵 O dobro do cachê ═══
    CONTEXTO: seu primeiro freela de site pagou X; o segundo
@@ -48,7 +57,10 @@
    de quem chamou.
    RESULTADO ESPERADO: 300 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function dobro(valor) {
+   return valor * 2
+}
+console.log(dobro(150))
 
 /* ═══ EXERCÍCIO 4 — 🍕 Rachando a conta (2 parâmetros) ═══
    CONTEXTO: pizza + refri, dividido entre a galera.
@@ -56,7 +68,10 @@
    Mostre rachar(72, 4).
    RESULTADO ESPERADO: 18 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function rachar(valorTotal, pessoas) {
+   return valorTotal / pessoas
+}
+console.log(rachar(72,4))
 
 /* ═══ EXERCÍCIO 5 — 🏹 A versão arrow ═══
    CONTEXTO: no trampo você vai ver MUITO essa sintaxe curta.
@@ -68,6 +83,9 @@
    RESULTADO ESPERADO: 42 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+const dobroSeta = (n) => n * 2;
+console.log(dobroSeta(21))
+
 
 /* ═══ EXERCÍCIO 6 — 👋 Parâmetro padrão ═══
    CONTEXTO: o sistema de cadastro saúda o usuário — e quando
@@ -77,7 +95,13 @@
    RESULTADO ESPERADO:
    Bem-vindo(a), visitante! / Bem-vindo(a), Rebeca! */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function login(nome) {
+   if(nome === nome){
+      console.log(`Bem-vindo(a), ${nome} `)
+   } 
+}
+console.log("Bem-vindo(a), visitante!")
+login("Rebeca")
 
 /* ═══ EXERCÍCIO 7 — 🔭 Escopo: onde a variável vive ═══
    CONTEXTO: clássico de entrevista técnica!
@@ -89,7 +113,7 @@
        }
        calcularCache();
        // console.log("fora: " + cache);
-   PREVISÃO DA DUPLA: ____________________
+   PREVISÃO DA DUPLA: O consolhe log não irá chamar pois a variavel só existes dentro da função
    DICA: variável de dentro só vive lá dentro (escopo local).
    RESULTADO ESPERADO: "dentro: 500" funciona; a linha de fora dá
    ReferenceError: cache is not defined */
@@ -113,7 +137,18 @@ calcularCache();
    DICA: if / else if / else DENTRO da função, com return em cada.
    RESULTADO ESPERADO: Ainda não vota / Voto opcional / Voto obrigatório */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+function situacaoVoto(idade) {
+   if (idade >= 18) {
+      return "voto Obrigatório"
+   } else if ( idade >= 16){
+      return "Voto opcional"
+   } else {
+      return "Ainda não vota"
+   }
+}
+console.log(situacaoVoto(15))
+console.log(situacaoVoto(17))
+console.log(situacaoVoto(20))
 
 /* ═══ EXERCÍCIO 9 — 📋 O corre da semana (array básico) ═══
    CONTEXTO: sua agenda da semana num array.
@@ -123,6 +158,10 @@ calcularCache();
    DICA: último =  corre[corre.length - 1]
    RESULTADO ESPERADO: aula / freela / 4 */
 // ✍️ SOLUÇÃO DA DUPLA:
+let corre =  ["aula", "estágio", "academia","freela"];
+let primeiro = corre[corre.length - 4];
+ let ultimo =  corre[corre.length - 1];
+console.log(`${primeiro} / ${ultimo} / ${corre.length} `);
 
 
 /* ═══ EXERCÍCIO 10 — 🛒 A lista da feira (push/pop) ═══
@@ -133,6 +172,11 @@ calcularCache();
    RESULTADO ESPERADO: ["banana", "tomate", "pastel"] */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let listaFeira = ["banana", "tomate"];
+listaFeira.push("pastel", "caldo de cana");
+listaFeira.pop(3)
+console.log(listaFeira)
+
 
 /* ═══ EXERCÍCIO 11 — 🔍 Tem pastel? (includes) ═══
    CONTEXTO: conferindo a lista antes de sair de casa.
@@ -141,6 +185,7 @@ calcularCache();
    EXEMPLO (molde):  lista.includes("item")  → true/false
    RESULTADO ESPERADO: true / false */
 // ✍️ SOLUÇÃO DA DUPLA:
+console.log(listaFeira.includes("pastel") + " / " + listaFeira.includes("picanha"));
 
 
 /* ═══ EXERCÍCIO 12 — 🧮 Função que soma lista ═══

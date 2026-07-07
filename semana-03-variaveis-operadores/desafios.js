@@ -29,7 +29,10 @@
    DICA: texto vai entre aspas; número vai sem aspas.
    RESULTADO ESPERADO (exemplo): Duda / 19 / Santo Amaro */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let nome = "João"
+let idade = 32
+let bairro = "Jardim Miriam"
+console.log(nome + " / " + idade + " / " + bairro)
 
 /* ═══ EXERCÍCIO 2 — 🚌 Recarga do bilhete único ═══
    CONTEXTO: você está no Terminal Santo Amaro com R$ 3,50 no
@@ -45,8 +48,10 @@
    DICA: decimal em JavaScript usa PONTO (3.50), não vírgula.
    RESULTADO ESPERADO: Saldo novo: R$ 23.5 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
-
+let saldo = 3.50;
+let recarga = 20;
+let saldoNovo = saldo + recarga;
+console.log(`Saldo novo: R$ ${saldoNovo}`)
 /* ═══ EXERCÍCIO 3 — 🍟 O troco do lanche ═══
    CONTEXTO: o combo na lanchonete do Largo 13 custa R$ 18 e você
    pagou com uma nota de R$ 50.
@@ -54,7 +59,10 @@
    DICA: subtração é o sinal de menos (-).
    RESULTADO ESPERADO: Troco: R$ 32 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let combo = 18
+let nota = 50
+let troco = nota - combo
+console.log(`Troco: R$ ${troco}`)
 
 /* ═══ EXERCÍCIO 4 — 🕵️ Texto que parece número ═══
    CONTEXTO: um formulário devolveu "18" (com aspas!) como preço.
@@ -63,7 +71,7 @@
        let preco = "18";
        console.log(preco + 2);
        console.log(typeof preco);
-   PREVISÃO DA DUPLA: linha 1 = ______  linha 2 = ______
+   PREVISÃO DA DUPLA: linha 1 = 182  linha 2 = string
    DICA: aspas transformam qualquer coisa em texto — e texto GRUDA.
    RESULTADO ESPERADO: 182 / string */
 let preco = "18";
@@ -77,7 +85,8 @@ console.log(typeof preco);
    EXEMPLO: let n = Number(textoQueEhNumero);
    RESULTADO ESPERADO: 20 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let number = Number(preco);
+console.log(number + 2)
 
 /* ═══ EXERCÍCIO 6 — 🎓 A média para passar ═══
    CONTEXTO: suas notas nas três atividades da UC09: 7, 9 e 6.
@@ -86,7 +95,11 @@ console.log(typeof preco);
          (a + b + c) / 3
    RESULTADO ESPERADO: Média: 7.333333333333333 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let nota1 = 7;
+let nota2 = 9;
+let nota3 = 6;
+let media = (nota1 + nota2 + nota3) / 3
+console.log(`Média: ${media}`)
 
 /* ═══ EXERCÍCIO 7 — 🍕 A pizza da vitória do Brasil ═══
    CONTEXTO: o Brasil ganhou na Copa 🇧🇷 e a galera pediu pizza de
@@ -97,7 +110,9 @@ console.log(typeof preco);
    EXEMPLO: console.log(10 % 4);  // 2 (10 dividido por 4 sobra 2)
    RESULTADO ESPERADO: Sobram 2 pedaços */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let pizza = 8
+pizza = pizza % 3
+console.log(`Sobram ${pizza} pedaços`)
 
 /* ═══ EXERCÍCIO 8 — 🎂 Pode entrar no rolê? ═══
    CONTEXTO: o rolê de sábado é 18+.
@@ -108,6 +123,9 @@ console.log(typeof preco);
    let só pode nascer UMA vez no arquivo!)
    RESULTADO ESPERADO: true (ou false, conforme a idade) */
 // ✍️ SOLUÇÃO DA DUPLA:
+let idadeRole = 18;
+console.log(idadeRole >= 18)
+
 
 
 /* ═══ EXERCÍCIO 9 — 🪪 RG *E* dinheiro ═══
@@ -118,7 +136,10 @@ console.log(typeof preco);
    DICA: && = os DOIS precisam ser true; || = UM já basta.
    RESULTADO ESPERADO: false (com &&)  /  true (com ||) */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let temRG = true
+let temDinheiro = false
+console.log(temRG && temDinheiro)
+console.log(temRG || temDinheiro)
 
 /* ═══ EXERCÍCIO 10 — ⚽ Contador de gols ═══
    CONTEXTO: o Brasil fez mais um! 🥳
@@ -126,6 +147,10 @@ console.log(typeof preco);
    (ou gols = gols + 1). Mostre antes e depois.
    RESULTADO ESPERADO: 2 / 3 */
 // ✍️ SOLUÇÃO DA DUPLA:
+let gols = 2;
+console.log(`Gols do brasil: ${gols}`);
+gols += 1;
+console.log(`Gols do brasil: ${gols}`);
 
 
 /* ═══ EXERCÍCIO 11 — 🔒 const × let ═══
@@ -137,7 +162,7 @@ console.log(typeof preco);
        let saldoBanco = 50;
        saldoBanco = 45;        // pode?
        // cpf = "000";         // pode?
-   PREVISÃO DA DUPLA: ____________________
+   PREVISÃO DA DUPLA: CPF não vai mudar, mas o saldo muda.
    RESULTADO ESPERADO: saldoBanco muda numa boa; cpf dá
    TypeError: Assignment to constant variable. */
 const cpf = "111.222.333-44";
@@ -159,6 +184,7 @@ console.log("saldoBanco mudou para", saldoBanco, "| cpf continua", cpf);
    RESULTADO ESPERADO (exemplo):
    Meu nome é Duda, tenho 19 anos e moro em Santo Amaro. */
 // ✍️ SOLUÇÃO DA DUPLA:
+console.log(`Meu nome é ${nome}, tenho ${idade} anos e moro em ${bairro}`)
 
 
 /* ═══ EXERCÍCIO 13 — 🖥️ Aparecer NA PÁGINA (DOM) ═══
@@ -173,7 +199,7 @@ console.log("saldoBanco mudou para", saldoBanco, "| cpf continua", cpf);
        document.getElementById("umId").textContent = "um texto";
    RESULTADO ESPERADO: a frase aparece na caixa da página. */
 // ✍️ SOLUÇÃO DA DUPLA:
-
+let umID = document.getElementById("saida").textContent = `Meu nome é ${nome}, tenho ${idade} anos e moro em ${bairro}`
 
 /* ═══ EXERCÍCIO 14 — ⌨️ Lendo o input ═══
    CONTEXTO: o usuário digita o nome dele — você lê.
@@ -190,7 +216,10 @@ console.log("saldoBanco mudou para", saldoBanco, "| cpf continua", cpf);
    DICA: valor de input =  document.getElementById("nomeInput").value
    RESULTADO ESPERADO: digitou "Rebeca" e clicou → Bem-vindo(a), Rebeca! */
 function aoClicar() {
-  // ✍️ SOLUÇÃO DA DUPLA:
+ let nome = document.getElementById("nomeInput").value
+ let saida = document.getElementById ("saida")
+ saida.innerText = ` Bem-vindo(a), ${nome}!`
+ console.log(` Bem-vindo(a), ${nome}!`)
 
 }
 document.getElementById("btn").addEventListener("click", aoClicar);
@@ -210,13 +239,17 @@ document.getElementById("btn").addEventListener("click", aoClicar);
    BÔNUS para a dupla discutir: e se um amigo furar e virarem 3?
    RESULTADO ESPERADO: Cada um paga: R$ 18 */
 // ✍️ SOLUÇÃO DA DUPLA:
-
-
+let pizza1 = 60
+let refri = 12
+let pedido = (pizza1 + refri) / 4
+console.log("Cada um paga: R$" + pedido)
+let saida = document.getElementById ("saida")
+ saida.innerText = `Cada um paga: R$ ${pedido}`
 
 /* ============================================================
    ✅ CHECKLIST FINAL DA DUPLA
-   [ ] Todas as saídas batem com o resultado esperado?
-   [ ] Os DOIS sabem explicar cada linha via código?
-   [ ] Commit feito nos DOIS repositórios do GitHub?
+   [ X ] Todas as saídas batem com o resultado esperado?
+   [ x ] Os DOIS sabem explicar cada linha via código?
+   [ X] Commit feito nos DOIS repositórios do GitHub?
         git add . && git commit -m "Semana 03 resolvida — dupla X & Y"
    ============================================================ */
